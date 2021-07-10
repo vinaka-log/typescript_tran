@@ -22,7 +22,7 @@ interface NAME {
   last?: string;
 }
 
-let nameObj: NAME = {first: "Yamada" };
+let nameObj: NAME = {first: "Yamada", last: "takayuiki" };
 
 
 
