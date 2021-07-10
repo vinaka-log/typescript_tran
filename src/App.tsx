@@ -54,6 +54,15 @@ value = true;
 // value ="hell";
 value = 10;
 
+let arrayUni: (number | string)[];
+arrayUni = [0,1,2,"Hello"];
+
+let company :"Facebook" | "Geoole" | "Amazon"
+company = "Amazon";
+
+let memory :256 | 512;
+memory  = 512;
+
 function App() {
   return (
     <div className="App">
