@@ -48,6 +48,12 @@ const userA: USER = {
   password: "yyy",
 };
 
+// Union Types
+let value: boolean | number
+value = true;
+// value ="hell";
+value = 10;
+
 function App() {
   return (
     <div className="App">
