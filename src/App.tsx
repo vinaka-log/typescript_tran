@@ -72,6 +72,47 @@ msg2= "hell";
 let animal = {cat: "small cat"};
 let animal2: typeof animal = {cat: "big cat"};
 
+// keyof
+
+type KEYS = {
+  primary: string;
+  secondary: string;
+};
+
+let key: keyof KEYS
+key = "primary";
+
+// typeof + keyof
+
+const SPORTS = {
+  soccer : "Soccer",
+  baseball: "Baseball",
+};
+
+let keySports: keyof typeof SPORTS;
+
+// enum
+enum OS {
+  Winidows,
+  Mac, 
+  Linux,
+}
+
+interface PC {
+  id: number,
+  OStype: OS;
+}
+
+const PC1: PC = {
+  id:1,
+  OStype: OS.Mac,
+}
+
+const PC2 PC = {
+  id:2,
+  OStype: OS.Linux,
+}
+
 function App() {
   return (
     <div className="App">
