@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Data from "./data.json"
+
+type USERS = typeof Data;
 
 const name  = "hello";
 
@@ -158,8 +161,21 @@ function funcGen1<T extends string | null>(props: T){
 }
 
 const gen8 = funcGen1("hello");
-const gen9 = funcGen1("hello");
+const gen9 = funcGen1(123);
 
+interface Props {
+  price: number;
+}
+
+function funcGen3<T extends Props>(props: T) {
+  return { value: props.price };
+}
+
+const gen10 = funcGen3({ price: 10 });
+
+const funcGEN4 = <T extends Props>(props: T) =>  {
+  return { value: props.price };
+}
 
 
 function App() {
