@@ -19,12 +19,14 @@ let array2 = [0, 1,"Hello"];
 
 interface NAME {
   first: string;
-  last?: string;
+  last: string | null;
 }
 
-let nameObj: NAME = {first: "Yamada", last: "takayuiki" };
+let nameObj: NAME = {first: "Yamada", last: null };
 
-
+const func1 = (x:number, y: number) :number => {
+  return x + y;
+}
 
 
 
