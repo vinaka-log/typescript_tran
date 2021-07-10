@@ -108,10 +108,24 @@ const PC1: PC = {
   OStype: OS.Mac,
 }
 
-const PC2 PC = {
+const PC2: PC = {
   id:2,
   OStype: OS.Linux,
 }
+
+// 型の互換性
+const comp1 = "test1";
+let comp2: string = comp1;
+
+let comp3: string = "test";
+let comp4: "test" = comp3;
+
+let funcomp1 = (x:number) => {}
+let funcomp2 = (x:string) => {}
+
+funcomp1 = funcomp2
+funcomp2 = funcomp1
+
 
 function App() {
   return (
