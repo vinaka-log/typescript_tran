@@ -126,6 +126,41 @@ let funcomp2 = (x:string) => {}
 funcomp1 = funcomp2
 funcomp2 = funcomp1
 
+// Generics
+interface GEN<T>{
+  item: T
+}
+
+const gen0: GEN<string> = {item: "hello"};
+const gen1: GEN = {item: "hell"};
+const gen2: GEN<number> = {item: 12};
+
+interface GEN1<T = string>{
+  item: T
+}
+
+const gen3: GEN1 = {item: "hell"};
+
+interface GEN2<T extends string| number> {
+  item: T ;
+}
+const gen5: GEN2<number> = {item: 12};
+
+function funcGEN<T>(props: T) {
+  return {item: props};
+}
+
+const gen6 =funcGEN<string>("test");
+const gen7 =funcGEN<string | null>(null);
+
+function funcGen1<T extends string | null>(props: T){
+  return{value: props};
+}
+
+const gen8 = funcGen1("hello");
+const gen9 = funcGen1("hello");
+
+
 
 function App() {
   return (
